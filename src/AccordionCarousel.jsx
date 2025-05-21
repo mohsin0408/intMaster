@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import LogoutButton from "./LogoutButton";
 
 const AccordionCarousel = () => {
   const [accordions, setAccordions] = useState([
@@ -136,6 +137,7 @@ const AccordionCarousel = () => {
         />
         <button onClick={handleAdd}>Add</button>
       </div>
+      <LogoutButton />
     </div>
   );
 };
