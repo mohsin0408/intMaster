@@ -3,6 +3,7 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 // TODO: Aap jo bhi dusre Firebase products use karna chahte hain unke SDKs add karein
 // Jaise: import { getAuth } from "firebase/auth";
@@ -23,7 +24,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth(app);
+const db = getFirestore(app);
 
 // Export karein 'app' instance aur 'analytics' (agar zaroori ho)
 // Taki aap inhe apni React components mein import kar sakein
-export { app, analytics, auth };
+export { app, analytics, auth, db };
