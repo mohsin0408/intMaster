@@ -14,7 +14,7 @@ function Login() {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        navigate("/accord");
+        navigate("/home");
       }
     });
     return () => unsubscribe();
@@ -28,7 +28,7 @@ function Login() {
       await signInWithEmailAndPassword(auth, email, password);
       setMessage("Login successful");
       setTimeout(() => {
-        navigate("/accord");
+        navigate("/home");
       }, 2000);
     } catch (err) {
       console.error("Login Error:", err);
