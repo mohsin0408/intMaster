@@ -4,10 +4,16 @@ import { Outlet, Link } from "react-router-dom";
 const Practical = () => {
   return (
     <div>
-      <nav>
-        <Link to="pstyle">CSS</Link>
-        <Link to="pscript">JS</Link>
-        <Link to="preact">React</Link>
+      <nav className="theory-links">
+        <Link to="pstyle" style={{ color: "purple", textDecoration: "none" }}>
+          CSS
+        </Link>
+        <Link to="pscript" style={{ color: "purple", textDecoration: "none" }}>
+          JS
+        </Link>
+        <Link to="preact" style={{ color: "purple", textDecoration: "none" }}>
+          React
+        </Link>
       </nav>
       <Outlet />
     </div>

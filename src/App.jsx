@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import AccordionCarousel from "./AccordionCarousel";
+// import AccordionCarousel from "./AccordionCarousel";
 import TodoApp from "./TodoApp";
 import Login from "./Login";
 import Register from "./Register";
@@ -27,7 +27,7 @@ const App = () => {
         {/* Protected route with nested routes inside Home */}
         <Route element={<ProtectedRoute />}>
           <Route path="/home" element={<Home />}>
-            <Route path="accord" element={<AccordionCarousel />} />
+            {/* <Route path="accord" element={<AccordionCarousel />} /> */}
             <Route path="todo" element={<TodoApp />} />
             <Route path="theory" element={<Theory />}>
               <Route path="text" element={<Text />} />

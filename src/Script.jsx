@@ -1,7 +1,13 @@
 import React from "react";
+import AccordionCarousel from "./AccordionCarousel";
+import theoryData from "./TheoryData";
 
 const Script = () => {
-  return <div>Script</div>;
+  return (
+    <div>
+      <AccordionCarousel questionData={theoryData.script} />
+    </div>
+  );
 };
 
 export default Script;
