@@ -3,15 +3,21 @@ import { Outlet, Link } from "react-router-dom";
 
 const Practical = () => {
   return (
-    <div>
-      <nav className="theory-links">
-        <Link to="pstyle" style={{ color: "purple", textDecoration: "none" }}>
+    <div className="p-6 bg-gray-100 rounded shadow-lg">
+      <nav className="flex justify-center gap-6 mb-6">
+        <Link
+          to="pstyle"
+          className="text-blue-600 hover:text-blue-800 font-medium transition duration-200">
           CSS
         </Link>
-        <Link to="pscript" style={{ color: "purple", textDecoration: "none" }}>
+        <Link
+          to="pscript"
+          className="text-blue-600 hover:text-blue-800 font-medium transition duration-200">
           JS
         </Link>
-        <Link to="preact" style={{ color: "purple", textDecoration: "none" }}>
+        <Link
+          to="preact"
+          className="text-blue-600 hover:text-blue-800 font-medium transition duration-200">
           React
         </Link>
       </nav>

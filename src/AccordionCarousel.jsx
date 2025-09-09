@@ -13,48 +13,57 @@ const AccordionCarousel = ({ questionData }) => {
 
   const nextAccordion = () => {
     setCurrentIndex((prev) => (prev + 1) % totalItems);
-    setActiveId(null); // collapse accordion on next
+    setActiveId(null);
   };
 
   const prevAccordion = () => {
     setCurrentIndex((prev) => (prev - 1 + totalItems) % totalItems);
-    setActiveId(null); // collapse accordion on prev
+    setActiveId(null);
   };
 
   const currentItem = questionData.data[currentIndex];
 
   return (
-    <div style={styles.container}>
-      <h2 style={styles.heading}>{questionData.heading}</h2>
-      <div style={{ marginTop: "10px" }}>
+    <div className="max-w-xl px-4 mx-auto mt-10 font-sans text-center">
+      <h2 className="mb-5 text-2xl font-bold">{questionData.heading}</h2>
+
+      <div className="mb-4">
         <input
           type="text"
           placeholder="Search Questions"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
+          className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
         />
       </div>
-      <div style={styles.card}>
+
+      <div className="p-4 mb-6 text-left bg-gray-100 border border-gray-300 rounded-lg">
         <div
-          style={styles.questionHeader}
+          className="flex items-center justify-between cursor-pointer"
           onClick={() => toggleActive(currentItem.id)}>
-          <h3 style={styles.question}>{currentItem.query}</h3>
-          <span style={styles.toggle}>
+          <h3 className="text-lg font-semibold">{currentItem.query}</h3>
+          <span className="text-xl">
             {activeId === currentItem.id ? "−" : "+"}
           </span>
         </div>
 
         {activeId === currentItem.id && (
-          <p style={styles.answer}>{currentItem.answer}</p>
+          <p className="mt-3 text-base text-gray-800 whitespace-pre-wrap ">
+            {currentItem.answer}
+          </p>
         )}
       </div>
 
-      <div style={styles.buttonGroup}>
-        <button onClick={prevAccordion} style={styles.button}>
-          ⬅️ Previous
+      <div className="flex justify-center gap-4">
+        <button
+          onClick={prevAccordion}
+          className="px-5 py-2 text-white transition bg-blue-500 rounded-md hover:bg-blue-600">
+          ← Previous
         </button>
-        <button onClick={nextAccordion} style={styles.button}>
-          Next ➡️
+        <button
+          onClick={nextAccordion}
+          className="px-5 py-2 text-white transition bg-blue-500 rounded-md hover:bg-blue-600">
+          Next →
         </button>
       </div>
     </div>
@@ -62,56 +71,3 @@ const AccordionCarousel = ({ questionData }) => {
 };
 
 export default AccordionCarousel;
-
-const styles = { 
-  container: {
-    maxWidth: "600px",
-    margin: "40px auto",
-    textAlign: "center",
-    fontFamily: "Arial, sans-serif",
-  },
-  heading: {
-    fontSize: "24px",
-    marginBottom: "20px",
-    fontWeight: "bold",
-  },
-  card: {
-    border: "1px solid #ccc",
-    borderRadius: "8px",
-    padding: "16px",
-    marginBottom: "20px",
-    textAlign: "left",
-    backgroundColor: "#f9f9f9",
-  },
-  questionHeader: {
-    display: "flex",
-    justifyContent: "space-between",
-    cursor: "pointer",
-  },
-  question: {
-    fontSize: "18px",
-    fontWeight: "600",
-  },
-  toggle: {
-    fontSize: "20px",
-  },
-  answer: {
-    marginTop: "10px",
-    fontSize: "16px",
-    color: "#333",
-  },
-  buttonGroup: {
-    display: "flex",
-    justifyContent: "center",
-    gap: "10px",
-  },
-  button: {
-    padding: "10px 20px",
-    fontSize: "16px",
-    backgroundColor: "#007bff",
-    color: "#fff",
-    border: "none",
-    borderRadius: "6px",
-    cursor: "pointer",
-  },
-};

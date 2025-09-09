@@ -3,18 +3,26 @@ import { Outlet, Link } from "react-router-dom";
 
 const Theory = () => {
   return (
-    <div className="theory">
-      <nav className="theory-links">
-        <Link to="text" style={{ color: "blue", textDecoration: "none" }}>
+    <div className="p-6 bg-gray-100 rounded shadow-lg">
+      <nav className="flex justify-center space-x-6 mb-6">
+        <Link
+          to="text"
+          className="text-blue-600 hover:text-blue-800 font-medium transition duration-200">
           HTML
         </Link>
-        <Link to="style" style={{ color: "blue", textDecoration: "none" }}>
+        <Link
+          to="style"
+          className="text-blue-600 hover:text-blue-800 font-medium transition duration-200">
           CSS
         </Link>
-        <Link to="script" style={{ color: "blue", textDecoration: "none" }}>
+        <Link
+          to="script"
+          className="text-blue-600 hover:text-blue-800 font-medium transition duration-200">
           JS
         </Link>
-        <Link to="react" style={{ color: "blue", textDecoration: "none" }}>
+        <Link
+          to="react"
+          className="text-blue-600 hover:text-blue-800 font-medium transition duration-200">
           React
         </Link>
       </nav>

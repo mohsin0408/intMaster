@@ -20,11 +20,9 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        {/* Public routes */}
         <Route path="/" element={<Register />} />
         <Route path="/login" element={<Login />} />
 
-        {/* Protected route with nested routes inside Home */}
         <Route element={<ProtectedRoute />}>
           <Route path="/home" element={<Home />}>
             {/* <Route path="accord" element={<AccordionCarousel />} /> */}

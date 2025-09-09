@@ -12,7 +12,7 @@ const theoryData = {
         query: "What is DOCTYPE?",
         answer: "It declares the HTML version.",
       },
-      {
+      { 
         id: 3,
         query: "what is meta-tag?",
         answer:
@@ -151,15 +151,70 @@ const theoryData = {
           "props is a special keyword for properties & it is used to pass data from one parent component to the other.",
       },
       {
-        id: 3,
+        id: 4,
         query: "Difference between state and props?",
         answer: "State is mutable but props are immutable.",
       },
       {
-        id: 4,
-        query: "What is state?",
+        id: 5,
+        query: "How do you optimized your React app performance.?",
         answer:
-          "State of a component is an object that holds some information that may change over the lifetime of the component.",
+          "To optimize react app I used React.memo, useCallback, useMemo and to avoid prop drilling i used Redux and Context API ",
+      },
+      {
+        id: 6,
+        query: "How do you ensure accessibility in your UI components?",
+        answer:
+          "Use semantic HTML, add ARIA attributes, use labels for form inputs, use alt text for imgs",
+      },
+      {
+        id: 7,
+        query: "Why we use <link/> instead of <a/>?",
+        answer:
+          "To enable smooth, fast navigation without reloading the full page. <a /> reloads the whole page, while <Link /> keeps it a single-page app (SPA).",
+      },
+      {
+        id: 8,
+        query:
+          "What is key prop and what is the benefit of using it in arrays of elements?",
+        answer:
+          "Key prop helps React identify which items have changed, are added, or are removed.",
+      },
+      {
+        id: 9,
+        query: "What is Virtual DOM?",
+        answer:
+          "The Virtual DOM (VDOM) in React is a lightweight representation of the actual Document Object Model (DOM), it creates a Virtual DOM tree that mirrors the structure of the UI and render only that part in which changes is made",
+      },
+      {
+        id: 10,
+        query: "Is it possible to use react without JSX?",
+        answer:
+          "Yes, we can as JSX is not mandatory for react but on the same hand jsx is widely use and highhly recommended for visual clarity and solving errors",
+      },
+      {
+        id: 11,
+        query: "What are inline conditional expressions?",
+        answer:
+          "The ternary operator ( ? : ) is a short if-else statement which takes 3 operands. ",
+      },
+      {
+        id: 11,
+        query: "What are inline conditional expressions?",
+        answer:
+          "The ternary operator ( ? : ) is a short if-else statement which takes 3 operands. ",
+      },
+      {
+        id: 12,
+        query: "?",
+        answer:
+          "The ternary operator ( ? : ) is a short if-else statement which takes 3 operands. ",
+      },
+      {
+        id: 11,
+        query: "What are inline conditional expressions?",
+        answer:
+          "The ternary operator ( ? : ) is a short if-else statement which takes 3 operands. ",
       },
     ],
   },
